@@ -4,5 +4,4 @@ type Sheet struct {
 	ID          string
 	Command     string
 	Description string
-	Example     string
 }

@@ -27,6 +27,7 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
+	Args: cobra.ArbitraryArgs,
 	Run: func(cmd *cobra.Command, args []string) {
 
 		var allSheets []domain.Sheet
@@ -39,7 +40,10 @@ to quickly create a Cobra application.`,
 		}
 
 		for _, sheet := range allSheets {
-			fmt.Printf("[%s] %s %s \n", sheet.ID, sheet.Command, sheet.Description)
+			fmt.Printf("%s\n", sheet.ID)
+			fmt.Printf("Command: %s\n", sheet.Command)
+			fmt.Printf("Description: %s\n\n", sheet.Description)
+
 		}
 	},
 }
