@@ -1,8 +1,10 @@
 package domain
 
 type SheetRepo interface {
-	Exists(name string) bool
+	ExistsCommand(name string) bool
+	ExistsID(name string) bool
 	Save(sheet Sheet)
-	Delete(sheet Sheet)
+	Delete(ID string)
 	Get(name string) []Sheet
+	GetAll() []Sheet
 }

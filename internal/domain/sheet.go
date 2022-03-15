@@ -1,8 +1,8 @@
 package domain
 
 type Sheet struct {
-	id          string
-	Name        string
+	ID          string
+	Command     string
 	Description string
-	Examples    []string
+	Example     string
 }
