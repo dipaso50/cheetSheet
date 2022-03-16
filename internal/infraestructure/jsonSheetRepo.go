@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 type CheetSheets struct {
@@ -163,7 +164,7 @@ func (jsonRepo *JsonSheetRepo) Get(command string) []domain.Sheet {
 	var results []domain.Sheet
 
 	for _, sheet := range allsheets {
-		if sheet.Command == command {
+		if strings.Contains(sheet.Command, command) {
 			results = append(results, domain.Sheet{
 				ID:          sheet.ID,
 				Command:     sheet.Command,

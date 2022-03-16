@@ -116,7 +116,7 @@ func TestRetreiveSheet(t *testing.T) {
 	for _, escenarion := range []errorTestCases{
 
 		{
-			sheet:        domain.Sheet{Command: "docker", Description: "kakak", Example: "docker run", ID: "lala"},
+			sheet:        domain.Sheet{Command: "docker", Description: "kakak", ID: "lala"},
 			errorMessage: "Commando must exist into the file",
 			description:  "Save sheet into file test",
 			fileLocation: "/tmp",
